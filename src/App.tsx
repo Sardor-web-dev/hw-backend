@@ -39,8 +39,8 @@ function App() {
       <div className="userbox">
         {users.map((user) => (
           <div onClick={() => { setModal(true); setUser(user) }} className="User" key={user.id}>
-            <h1>{user.name}</h1>
-            <p>{user.phone}</p>
+            <p className='p'>{user.name}</p>
+            <p>{user.email}</p>
           </div>
         ))}
       </div>
