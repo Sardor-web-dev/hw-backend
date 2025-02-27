@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res: Response) => res.json())
-      .then((res: user[]) => setUsers(res)); // promise x3
+      .then((res: user[]) => setUsers(res)); 
   }, []);
 
   return (
