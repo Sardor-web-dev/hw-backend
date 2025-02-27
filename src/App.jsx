@@ -24,7 +24,7 @@ function App() {
           <p><b>Gmail adress:</b> {selectedUser.email}</p>
           <p><b>Website:</b> {selectedUser.website}</p>
         </div>
-        <button onClick={() => {setModal(false); setUser(null)}}>Close modal</button>
+        <button onClick={() => {setModal(false); setUser(null)}}>Back</button>
       </div>}
       <div className="userbox">
       {users.map((user) => (
