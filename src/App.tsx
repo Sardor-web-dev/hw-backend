@@ -4,13 +4,13 @@ import { useState } from "react";
 
 function App() {
   const [users, setUsers] = useState([]);
-  const [modal, setModal]= useState(false);
+  const [modal, setModal] = useState(false);
   const [selectedUser, setUser] = useState(null);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
-    .then((res) => res.json())
-    .then((res) => setUsers(res)); // promise x3
+      .then((res) => res.json())
+      .then((res) => setUsers(res)); // promise x3
   }, []);
 
   return (
@@ -24,15 +24,15 @@ function App() {
           <p><b>Gmail adress:</b> {selectedUser.email}</p>
           <p><b>Website:</b> {selectedUser.website}</p>
         </div>
-        <button onClick={() => {setModal(false); setUser(null)}}>Back</button>
+        <button onClick={() => { setModal(false); setUser(null) }}>Back</button>
       </div>}
       <div className="userbox">
-      {users.map((user) => (
-        <div onClick={() => {setModal(true); setUser(user)}} className="User" key={user.id}>
-          <h1>{user.name}</h1>
-          <p>{user.phone}</p>
-        </div>
-      ))}
+        {users.map((user) => (
+          <div onClick={() => { setModal(true); setUser(user) }} className="User" key={user.id}>
+            <h1>{user.name}</h1>
+            <p>{user.phone}</p>
+          </div>
+        ))}
       </div>
 
 
