@@ -18,11 +18,11 @@ function App() {
 
       {modal && <div className="modal">
         <div className="selected_user">
-          <h1>{selectedUser.name}</h1>
-          <p>{selectedUser.username}</p>
-          <p>{selectedUser.phone}</p>
-          <p>{selectedUser.email}</p>
-          <p>{selectedUser.website}</p>
+          <h1>Name: {selectedUser.name}</h1>
+          <p><b>Username:</b> {selectedUser.username}</p>
+          <p><b>Phone number:</b> {selectedUser.phone}</p>
+          <p><b>Gmail adress:</b> {selectedUser.email}</p>
+          <p><b>Website:</b> {selectedUser.website}</p>
         </div>
         <button onClick={() => {setModal(false); setUser(null)}}>Close modal</button>
       </div>}
